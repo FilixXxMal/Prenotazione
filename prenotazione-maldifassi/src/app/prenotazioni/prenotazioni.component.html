@@ -34,7 +34,7 @@
 
   <br>
   <ul class="prenotazioni">
-    <il *ngFor="let p of prenotazione"
+    <il *ngFor="let p of prenotazioni"
       [class.selected]="p === selectedPrenotazione"
       (click)="onSelected(p)">
     <span class="badge">{{p.DataPrenotazione}}</span>
