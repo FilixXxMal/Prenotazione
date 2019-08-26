@@ -3,12 +3,12 @@
 <form [fromGroup]="my Form" (ngSumbit)="OnSumbit(myForm.value)"
       class="jumbotron">
 <div class="form-group">
-  Nome:<input type="text" name="name" [FromControl]="myForm.Controls['nome']"><br></br>
-  Cognome:<input type="text" name="Cognome" [FromControl]="myForm.Controls['Cognome']"><br></br>
-  Indirizzo:<input type="email" name="Indirizzo" [FromControl]="myForm.Controls['Indirizzo']"><br></br>
-  Telefono:<input type="tel" name="Telefono" [FromControl]="myForm.Controls['Telefono']"><br></br>
-  Data Prenotazioni:<input type="date" name="Data Prenotazioni" [FromControl]="myForm.Controls['Data Prenotazioni']"><br></br>
-  Ora Prenotazioni:<input type="time" name="Ora Prenotazioni" [FromControl]="myForm.Controls[' Ora Prenotazioni']"><br></br>
+  Nome:<input type="text" name="name" [fromControl]="myForm.Controls['nome']"><br></br>
+  Cognome:<input type="text" name="Cognome" [fromControl]="myForm.Controls['Cognome']"><br></br>
+  Indirizzo:<input type="email" name="Indirizzo" [fromControl]="myForm.Controls['Indirizzo']"><br></br>
+  Telefono:<input type="tel" name="Telefono" [fromControl]="myForm.Controls['Telefono']"><br></br>
+  Data Prenotazioni:<input type="date" name="Data Prenotazioni" [fromControl]="myForm.Controls['Data Prenotazioni']"><br></br>
+  Ora Prenotazioni:<input type="time" name="Ora Prenotazioni" [fromControl]="myForm.Controls[' Ora Prenotazioni']"><br></br>
 </div>
   <button type="summit"class="btn btn-primary">Prenota!</button><br><br><br>
   </form>

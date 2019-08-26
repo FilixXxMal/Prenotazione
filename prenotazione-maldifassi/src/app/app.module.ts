@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PrenotazioneViewComponent } from './prenotazione-view/prenotazione-view.component';
-import { PrenotazioneComponent } from './prenotazione/prenotazione.component';
+import { PrenotazioneComponent } from './prenotazione./prenotazione.component';
 import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
 
 @NgModule({
@@ -11,7 +11,7 @@ import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
     AppComponent,
     PrenotazioneViewComponent,
     PrenotazioneComponent,
-    PrenotazioniComponent
+    PrenotazioniComponent,
   ],
   imports: [
     BrowserModule
