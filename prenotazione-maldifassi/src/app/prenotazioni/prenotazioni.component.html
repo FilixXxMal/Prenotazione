@@ -1,0 +1,49 @@
+<div class="container">
+<h2>Inserire le credenziali per la prenotazione</h2>
+<form [fromGroup]="my Form" (ngSumbit)="OnSumbit(myForm.value)"
+      class="jumbotron">
+<div class="form-group">
+  Nome:<input type="text" name="name" [FromControl]="myForm.Controls['nome']"><br></br>
+  Cognome:<input type="text" name="Cognome" [FromControl]="myForm.Controls['Cognome']"><br></br>
+  Indirizzo:<input type="email" name="Indirizzo" [FromControl]="myForm.Controls['Indirizzo']"><br></br>
+  Telefono:<input type="tel" name="Telefono" [FromControl]="myForm.Controls['Telefono']"><br></br>
+  Data Prenotazioni:<input type="date" name="Data Prenotazioni" [FromControl]="myForm.Controls['Data Prenotazioni']"><br></br>
+  Ora Prenotazioni:<input type="time" name="Ora Prenotazioni" [FromControl]="myForm.Controls[' Ora Prenotazioni']"><br></br>
+</div>
+  <button type="summit"class="btn btn-primary">Prenota!</button><br><br><br>
+  </form>
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Nome non valido
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Cognome non valido
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Indirizzo non valido
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Telefono non valido
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Data Prenotazione non valida
+  </div>
+  <div *ngIf="!myForm.controls['nome'].valid"
+        class="alert alert-danger">Ora Prenotazione non valida
+  </div>
+
+  <br>
+  <ul class="prenotazioni">
+    <il *ngFor="let p of prenotazione"
+      [class.selected]="p === selectedPrenotazione"
+      (click)="onSelected(p)">
+    <span class="badge">{{p.DataPrenotazione}}</span>
+    <span class="ins">{{p.nome}} {{p.cognome}}</span>
+    </il>
+  </ul>
+
+
+  <hr>
+  <div>
+  <app-prenotazione-view *ngFor="selectedPrenotazione" [ciao]="selectedPrenotazione"></app-prenotazione-view>
+  </div>
